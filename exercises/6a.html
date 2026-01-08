@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>boolean and if statement</title>
+  </head>
+  <body>
+    <p>Exercise 6a to 6c</p>
+    <script>
+      let hour = 67;
+      let name = "Indrajeet Bohra";
+      if ((hour >= 0 && hour <= 5) || (hour >= 18 && hour <= 24)) {
+        console.log(`Good night ${name}!`);
+      } else if (hour >= 6 && hour <= 12) {
+        console.log(`Good morning ${name}!`);
+      } else if (hour >= 13 && hour <= 17) {
+        console.log(`Good afternoon ${name}!`);
+      } else console.log("hours can only be from 0 to 24 idiot");
+    </script>
+  </body>
+</html>

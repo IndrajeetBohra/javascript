@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coin Flip</title>
+  </head>
+  <body>
+    <p>Exercise 6f to 6j</p>
+    <script>
+      let randomNumber = Math.random();
+      console.log(randomNumber);
+      let result = "";
+
+      if (randomNumber <= 0.5) {
+        result = "heads";
+      } else result = "tails";
+
+      let guess = "heads";
+
+      const outcome = result === guess ? "You win" : "You lose";
+      console.log(outcome);
+      //   if (guess === result) {
+      //     console.log("You win!");
+      //   } else console.log("You lose!");
+    </script>
+  </body>
+</html>
