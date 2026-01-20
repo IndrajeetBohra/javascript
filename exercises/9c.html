@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex 9c</title>
+  </head>
+  <body>
+    <button onclick="displayChoice('Heads')">heads</button>
+    <button onclick="displayChoice('Tails')">tails</button>
+    <p class="display-message"></p>
+    <script>
+      function displayChoice(choice) {
+        document.querySelector(".display-message").innerHTML =
+          `You chose: ${choice}`;
+      }
+    </script>
+  </body>
+</html>

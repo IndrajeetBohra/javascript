@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex 9d-9f</title>
+  </head>
+  <body>
+    <input
+      class="js-name-input"
+      placeholder="Name"
+      onkeydown="displayNameEnter(event)"
+    />
+    <button onclick="displayName()">Submit</button>
+    <p class="js-display-message"></p>
+
+    <script>
+      function displayNameEnter(event) {
+        if (event.key === "Enter") {
+          displayName();
+        }
+      }
+      function displayName() {
+        const Name = document.querySelector(".js-name-input").value;
+        document.querySelector(".js-display-message").innerHTML =
+          `Your Name is: ${Name}`;
+      }
+    </script>
+  </body>
+</html>
