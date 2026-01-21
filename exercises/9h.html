@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex 9h</title>
+  </head>
+  <body>
+    <input class="js-input" onkeyup="update_input()" />
+    <p class="js-input-update"></p>
+    <script>
+      function update_input() {
+        const inputElement = document.querySelector(".js-input");
+        document.querySelector(".js-input-update").innerHTML =
+          inputElement.value;
+      }
+    </script>
+  </body>
+</html>
