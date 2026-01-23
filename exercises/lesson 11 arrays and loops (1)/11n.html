@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chl ex 11n</title>
+  </head>
+  <body>
+    <script>
+      words = ["apple", "grape", "red", "banana", "apple", "banana", "apple"];
+
+      function countWords(words) {
+        const result = {};
+        for (let index = 0; index < words.length; index++) {
+          const word = words[index];
+
+          // result[word] adds/accesses a property using whatever is
+          // saved inside the 'word' variable.
+          // If word = 'apple', result[word] will do result['apple']
+          // If word = 'grape', result[word] will do result['grape']
+          // this shit was not taught before hand
+          // it creates a property itself in the object if not present
+          if (!result[word]) {
+            result[word] = 1;
+          } else {
+            result[word]++;
+          }
+        }
+        return result;
+      }
+      console.log(countWords(words));
+      countWords(words);
+    </script>
+  </body>
+</html>

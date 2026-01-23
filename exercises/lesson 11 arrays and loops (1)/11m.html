@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chl ex 11m handle null case</title>
+  </head>
+  <body>
+    <script>
+      function minMax(nums) {
+        const output = {
+          min: null, // min: nums[0],
+          max: null, // max: nums[0],
+        };
+        // my solution
+        // if (!output.min && !output.max) {
+        //   output.min = null;
+        //   output.max = null;
+        // } else {
+        for (let index = 0; index < nums.length; index++) {
+          if (output.min === null || nums[index] < output.min) {
+            output.min = nums[index];
+          }
+          if (output.max === null || nums[index] > output.max) {
+            output.max = nums[index];
+          }
+        }
+        // }
+        return output;
+      }
+
+      console.log(minMax([]));
+      console.log(minMax([69]));
+      console.log(minMax([1, -3, 5]));
+      console.log(minMax([-2, 3, -5, 7, 10]));
+    </script>
+  </body>
+</html>
