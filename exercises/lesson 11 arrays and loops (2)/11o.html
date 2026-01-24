@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex 11o-11p arrays and loops part 2</title>
+  </head>
+  <body>
+    <script>
+      const array = ["apple", "grape", "search", "apple", "hello", "search"];
+      const array1 = ["not", "found"];
+
+      function search(array) {
+        for (let index = 0; index < array.length; index++) {
+          const element = array[index];
+          if (element === "search") {
+            return index;
+          }
+        }
+        return -1;
+      }
+      console.log(search(array));
+      //already works for 11p as well //return acts as break;
+    </script>
+  </body>
+</html>

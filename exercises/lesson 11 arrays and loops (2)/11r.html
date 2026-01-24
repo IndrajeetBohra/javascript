@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex 11r</title>
+  </head>
+  <body>
+    <script>
+      // remove all egg from array
+      function removeEgg(foods) {
+        const result = [];
+        for (let index = 0; index < foods.length; index++) {
+          const food = foods[index];
+          if (food === "egg") {
+            continue;
+          } else {
+            result.push(food);
+          }
+        }
+        return result;
+      }
+      console.log(removeEgg(["egg", "apple", "egg", "egg", "ham"]));
+      console.log(removeEgg(["eggs", "apple", "egg", "egg", "ham", "toast"]));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chl ex 11w</title>
+  </head>
+  <body>
+    <script>
+      function findIndex(array, word) {
+        for (let index = 0; index < array.length; index++) {
+          if (array[index] === word) {
+            return index;
+          }
+        }
+        return -1;
+      }
+
+      // return array after removing duplicates
+      function unique(array) {
+        const result = [];
+
+        for (let index = 0; index < array.length; index++) {
+          const element = array[index];
+
+          // Using the findIndex() function from above, we
+          // can check if the string is already in the
+          // result array. If it's not in the result array
+          // (index is -1), then add it to the result array.
+          if (findIndex(result, element) === -1) {
+            result.push(element);
+          }
+        }
+        return result;
+      }
+      console.log(unique(["green", "red", "blue", "green", "red"]));
+      console.log(unique(["red", "green", "green", "red", "red"]));
+      unique(["green", "red", "blue", "green", "red"]);
+      //   console.log(
+      //     findIndex(["hello", "world", "red", "toast", "green"], "not"),
+      //   );
+
+      //   console.log(
+      //     findIndex(["hello", "green", "red", "toast", "green"], "green"),
+      //   );
+    </script>
+  </body>
+</html>

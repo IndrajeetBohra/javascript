@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex 11t</title>
+  </head>
+  <body>
+    <script>
+      // remove only last 2eggs using array.reverse()
+      function removeEgg(foods) {
+        let eggsRemoved = 0;
+        const result = [];
+        const reversedFoods = foods.reverse();
+
+        for (let index = 0; index < reversedFoods.length; index++) {
+          const food = reversedFoods[index];
+          if (food === "egg" && eggsRemoved < 2) {
+            eggsRemoved++;
+            continue;
+          }
+          result.push(food);
+        }
+        return result.reverse();
+      }
+      console.log(removeEgg(["egg", "apple", "egg", "egg", "ham"]));
+      console.log(
+        removeEgg(["egg", "ham", "egg", "egg", "ham", "mead", "egg"]),
+      );
+    </script>
+  </body>
+</html>

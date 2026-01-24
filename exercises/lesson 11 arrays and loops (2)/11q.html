@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex 11q</title>
+  </head>
+  <body>
+    <script>
+      function findIndex(array, word) {
+        for (let index = 0; index < array.length; index++) {
+          const element = array[index];
+          if (element === word) {
+            return index;
+          }
+        }
+        return -1;
+      }
+      console.log(
+        findIndex(["hello", "world", "red", "toast", "green"], "red"),
+      );
+
+      console.log(
+        findIndex(["hello", "world", "red", "toast", "green"], "green"),
+      );
+    </script>
+  </body>
+</html>

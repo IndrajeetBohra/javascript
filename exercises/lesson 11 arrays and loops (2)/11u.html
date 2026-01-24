@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex 11u</title>
+  </head>
+  <body>
+    <script>
+      // dont modify original array
+      // remove only last 2eggs using array.reverse()
+
+      function removeEgg(foods) {
+        let eggsRemoved = 0;
+        const result = [];
+        const reverseArr = foods.slice().reverse(); //method chaining
+        for (let index = 0; index < reverseArr.length; index++) {
+          const food = reverseArr[index];
+          if (food === "egg" && eggsRemoved < 2) {
+            eggsRemoved++;
+            continue;
+          } else {
+            result.push(food);
+          }
+        }
+        return result.reverse();
+      }
+      const foods1 = ["egg", "apple", "egg", "egg", "ham"];
+      const foods2 = ["egg", "ham", "egg", "egg", "ham", "mead", "egg"];
+      console.log(removeEgg(foods1));
+      console.log(removeEgg(foods2));
+      console.log(foods1);
+      console.log(foods2);
+    </script>
+  </body>
+</html>
