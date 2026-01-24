@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Fucntions</title>
+  </head>
+  <body>
+    <script>
+      /*
+      greeting();
+      // shortcut for var greeting = function() {
+      // console.log('hello');
+      // };
+      function greeting() {
+        console.log("hello");
+      }
+      // above is easier to read and allows HOISTING <= meainng fucntion can be used before defining
+      greeting();
+
+      const num = 2;
+
+      // function1(); this returns Uncaught ReferenceError: Cannot access 'function1' before initialization
+      // if we delete the inside name, i.e, greeting()
+      // it is called anonymous function
+      // const function1 = function greeting() {
+      const function1 = function () {
+        console.log("hello2");
+      };
+      console.log(function1);
+      console.log(typeof function1);
+      function1();
+      // fucntion in object
+      const object1 = {
+        num: 2,
+        fun: function () {
+          console.log("hello3");
+        },
+      };
+      object1.fun();
+      // paramerter
+      function display(param) {
+        console.log(param);
+      }
+      display(2);
+      // passing a fucntion into function
+      function run(param) {
+        param();
+      }
+      run(function () {
+        console.log("hello4");
+      });
+      */
+      /*
+      // setTimeout is asynchronous code
+      // meaning it wont wait for a line to finish before going to the next line
+      setTimeout(function () {
+        console.log("timeout");
+        console.log("timeout2");
+      }, 3000);
+
+      console.log("next line");
+
+      //   setInterval(function () {
+      //     console.log("interval");
+      //   }, 3000);
+
+      console.log("next line 2");
+      */
+
+      ["make dinner", "wash dishes", "watch youtube"].forEach(
+        function (value, index) {
+          if (value === "wash dishes") {
+            return;
+            // cannot use break; to stop loop in foreach() fucn. use normal for loop to use break
+          }
+          console.log(index);
+          console.log(value);
+        },
+      );
+    </script>
+  </body>
+</html>
