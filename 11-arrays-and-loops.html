@@ -25,11 +25,13 @@
       // adds value at the end of the array
       myArray.push(100);
       console.log(myArray);
+
       // removes a value from an array.
       // take two number. 1st is index 2nd is the no of values to be removed starting from that index
       myArray.splice(1, 2);
       console.log(myArray);
       */
+
       /*
       // for non-standard loops
       let i = 1;
@@ -54,6 +56,7 @@
       //   console.log(value);
       // }
 
+      /*
       // Accumulator pattern
       const nums = [1, 1, 3];
       let total = 0;
@@ -71,6 +74,55 @@
         numsDoubled.push(num * 2);
       }
       console.log(numsDoubled);
+      */
+
+      // lesson 11 array and loops part 2
+      // array similar to objects are also just refrences
+
+      const array1 = [1, 2, 3];
+      const array2 = array1.slice(); //makes a copy so only array2 is affected
+      array2.push(4);
+      console.log(array1);
+      console.log(array2);
+
+      const [firstValue, secondValue] = [1, 2, 3];
+      // console.log(secondValue);
+
+      for (let index = 1; index <= 10; index++) {
+        if (index % 3 === 0) {
+          continue; // goes back up into next index // skips one iteration of the loop
+        }
+        console.log(index);
+        if (index === 8) {
+          break; // stops the loop
+        }
+      }
+
+      let index = 1;
+      while (index <= 10) {
+        if (index % 3 === 0) {
+          index++;
+          continue;
+        }
+        console.log(index);
+        index++;
+      }
+
+      function doubleArray(nums) {
+        const numsDoubled = [];
+        for (let index = 0; index < nums.length; index++) {
+          // my solution
+          // numsDoubled[index] = nums[index] * 2;
+          const num = nums[index];
+          if (num === 0) {
+            return numsDoubled; // acts as break;
+          }
+          numsDoubled.push(num * 2);
+        }
+        return numsDoubled;
+      }
+      console.log(doubleArray([1, 1, 3]));
+      console.log(doubleArray([2, 2, 5, 0, 5]));
     </script>
   </body>
 </html>
