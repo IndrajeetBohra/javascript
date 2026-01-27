@@ -10,7 +10,7 @@
     <button onclick="messages--">Remove</button>
     <script>
       let messages = 0;
-      setInterval(function () {
+      setInterval(() => {
         if (document.title === "App") {
           document.title = `(${messages}) New messages`;
         } else {
