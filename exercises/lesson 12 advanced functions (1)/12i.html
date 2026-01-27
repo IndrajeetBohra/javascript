@@ -6,22 +6,25 @@
     <title>App</title>
   </head>
   <body>
-    <button onclick="messages++">Add</button>
-    <button
-      onclick="
-        if (messages > 0) {
-          messages--;
-        }
-      "
-    >
-      Remove
-    </button>
+    <button class="js-add-button">Add</button>
+    <button class="js-remove-button">Remove</button>
     <script>
+      document.querySelector(".js-add-button").addEventListener("click", () => {
+        messages++;
+      });
+      document
+        .querySelector(".js-remove-button")
+        .addEventListener("click", () => {
+          if (messages > 0) {
+            messages--;
+          }
+        });
+
       // ssd solution creates function of displayNotif() with the setInterval mthod inside
       // and a var isDisplayingNotif to keep track with intervalID.
       // and another function stopNotif() to clear intervalID when messages === 0. check within remove button
       // my solution
-      let messages = 2;
+      let messages = 0;
 
       setInterval(() => {
         if (messages === 0) {
