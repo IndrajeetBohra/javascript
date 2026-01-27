@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex 12o</title>
+  </head>
+  <body>
+    <script>
+      const foods = ["egg", "apple", "egg", "egg", "ham"];
+      // remove only first 2 eggs
+      function removeEggs(foods) {
+        let eggRemoved = 0;
+        console.log(
+          foods.filter((food) => {
+            if (food === "egg" && eggRemoved < 2) {
+              eggRemoved++;
+              return false;
+            }
+            return true;
+          }),
+        );
+      }
+      removeEggs(foods);
+      removeEggs(["egg", "apple", "cheese", "egg", "ham", "egg", "egg"]);
+    </script>
+  </body>
+</html>

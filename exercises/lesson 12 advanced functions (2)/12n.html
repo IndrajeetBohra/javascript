@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex 12n</title>
+  </head>
+  <body>
+    <script>
+      const foods = ["egg", "apple", "egg", "egg", "ham"];
+      function removeEggs(foods) {
+        console.log(
+          foods.filter((food) => {
+            if (food === "egg") {
+              //ssd oneline sol .filter((food) => food !== 'egg');
+              return false;
+            } else return true;
+          }),
+        );
+      }
+      removeEggs(foods);
+      removeEggs(["egg", "apple", "cheese", "egg", "ham", "eeggs"]);
+    </script>
+  </body>
+</html>

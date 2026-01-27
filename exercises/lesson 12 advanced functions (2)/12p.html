@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex 12p</title>
+    <!-- update exercises 12c to 12i to use arrow fucntions -->
+  </head>
+  <body>
+    <!-- ex 12c -->
+    <button onclick="updateButton()" class="js-button-1">
+      Finish after 1s
+    </button>
+    <!-- ex 12d -->
+    <button onclick="updateButtonLoading()" class="js-button-2">
+      Finish after loading
+    </button>
+    <!-- ex 12e -->
+    <button onclick="displayMessage()">Add to cart</button>
+    <p class="js-message"></p>
+
+    <script>
+      function updateButton() {
+        const button = document.querySelector(".js-button-1");
+        setTimeout(() => {
+          button.innerHTML = "Finished";
+        }, 1000);
+      }
+      function updateButtonLoading() {
+        const button = document.querySelector(".js-button-2");
+        button.innerHTML = "Loading....";
+        setTimeout(() => {
+          button.innerHTML = "Finished";
+        }, 1000);
+      }
+      function displayMessage() {
+        const messageElement = document.querySelector(".js-message");
+        messageElement.innerHTML = "Added";
+        setTimeout(() => {
+          messageElement.innerHTML = "";
+        }, 2000);
+      }
+      // just gonna update the old files to use arrow fucntions instead cause this taking too long
+    </script>
+  </body>
+</html>
