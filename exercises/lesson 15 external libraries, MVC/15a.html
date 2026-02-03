@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex 15a</title>
+  </head>
+  <body>
+    <h1>Exercise 15a</h1>
+    <h1>In Lesson 15 We Learned</h1>
+    <h4>External libraries = code outside of our project</h4>
+    <h4>DayJS external library</h4>
+    <h4>External library + JS modules, deafult export</h4>
+    <h4>Created the delivery section</h4>
+    <h4>MVC = Model - View - Controller</h4>
+    <h4>Created the payment section</h4>
+    <script type="module">
+      import dayjs from "https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js";
+
+      const today = dayjs();
+      const date = today.add(5, "days");
+      console.log(date.format("MMMM D"));
+    </script>
+  </body>
+</html>
