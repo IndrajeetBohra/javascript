@@ -19,3 +19,5 @@ The structure and examples are inspired by the course content.
 Just following the tutorial no changes.
 
 ### maybe make a seprate repo for making changes to the website
+
+March 24 - revised JavaScript again after a month
